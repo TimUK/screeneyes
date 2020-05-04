@@ -19,10 +19,10 @@ namespace ScreenEyes
         
 
         int workTime;
-
         int breakTime;
-
         Boolean working = true;
+
+        int workcycles = 0;
         
 
         public Form1()
@@ -52,6 +52,19 @@ namespace ScreenEyes
             SETTING_BREAK_TIME_LENGTH = 300;
             SETTING_WORK_TIME_LENGTH = 1500;
             DefaultTimerModeTick();
+            if (working)
+            {
+                if (workTime == 1)
+                {
+                    workcycles++;
+                }
+                
+            }
+            if (workcycles == 3)
+            {
+                breakTime = 900;
+                workcycles = 0;
+            }
         }
 
         private void DefaultTimerModeTick()
@@ -75,7 +88,10 @@ namespace ScreenEyes
                 if (workTime == 0)
                 {
                     SystemSounds.Exclamation.Play();
-                    breakTime = SETTING_BREAK_TIME_LENGTH;
+                    if (breakTime != 900)
+                    {
+                        breakTime = SETTING_BREAK_TIME_LENGTH;
+                    }
                     working = false;
                     //MessageBox.Show("Work time is over!!");
 
