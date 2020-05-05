@@ -148,5 +148,18 @@ namespace ScreenEyes
             Settings settingsForm = new Settings(this);
             settingsForm.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (timer1.Enabled)
+            {
+                button2.Text = "Resume";
+            }else
+            {
+                button2.Text = "Pause";
+            }
+            timer1.Enabled = !timer1.Enabled;
+
+        }
     }
 }
