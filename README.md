@@ -8,7 +8,9 @@ The basic scope of this application is to have a basic system that will allow a 
 Building upon this basic functionality will be an implementation of the pomodoro timing technique and after that, users able to set their own work/break length.
 
 ![ScreenEyes Screenshot](https://i.imgur.com/6qCOTby.png)
+
 Main interface
 
 ![ScreenEyes Settings](https://i.imgur.com/EpmXhmT.png)
+
 Settings dialog
